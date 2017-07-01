@@ -6,7 +6,7 @@ var cors = require('cors');
 
 var mongoose = require('mongoose');
 
-var db = mongoose.connect('mongodb://localhost:27017/users');
+var db = mongoose.connect('mongodb://sachin.ghumnar:sachin@721@ds145302.mlab.com:45302/sachin721');
 
 var User = require('./model/userModel');
 
