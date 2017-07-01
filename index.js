@@ -14,6 +14,8 @@ var userRouter = require('./routes/userRoute')(User, express);
 
 app.use(cors());
 
+app.use(express.static(path.join(__dirname, 'client')));
+
 app.use('/user', userRouter);
 
 app.listen(process.env.PORT || 3000, process.env.IP || '0.0.0.0', function() {
