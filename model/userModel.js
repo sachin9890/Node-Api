@@ -33,7 +33,24 @@ var userModel = new Schema({
     userStatus: {
         type: String,
         default: true
+    },
+    securityQuestion:{
+        type:String,
+        default:"Question"
+    },
+    securityAnswer:{
+        type:String,
+        default:"Answer"
+    },
+    img: {
+        data: Buffer,
+        contentType: String
     }
 });
+
+userModel.methods.validPassword = function (pwd) {
+    // EXAMPLE CODE!
+    return ( this.password === pwd );
+};
 
 module.exports = mongoose.model('User', userModel);
