@@ -38,7 +38,7 @@ module.exports = function (User, express) {
     });
 
 
-    userRouter.get('/list', isLoggedIn, function (req, res) {
+    userRouter.get('/list', function (req, res) {
         userController.users(User, req, res);
     });
 

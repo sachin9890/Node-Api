@@ -28,7 +28,7 @@ var userRouter = require('./routes/userRoute')(User, express);
 
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, 'client/')));
+//app.use(express.static(path.join(__dirname, 'client/')));
 
 app.use(multer({
     dest: './uploads/',
