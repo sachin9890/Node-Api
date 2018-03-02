@@ -41,6 +41,6 @@ app.use(multer({
 app.use('/user', userRouter);
 
 
-app.listen(process.env.PORT || 3000, process.env.IP || '0.0.0.0', function () {
-    console.log('listening at', process.env.PORT || 3000, process.env.IP || '0.0.0.0');
+app.listen(process.env.PORT || 3000, function () {
+    console.log('listening at', process.env.PORT || 3000);
 });
